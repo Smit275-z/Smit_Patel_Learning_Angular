@@ -1,69 +1,30 @@
 <div class="app-container">
   <header class="app-header">
-    <h1>Welcome to My Angular App</h1>
+    <h1>Product List</h1>
   </header>
 
   <main class="app-main">
     <section class="content-section">
-      <p>My Name is {{ userName }} and this is the Learning Angular Project.</p>
-      <p>Status: You are currently {{ isLoggedIn ? 'logged in' : 'logged out' }}.</p>
+      <div *ngFor="let product of products" class="product-card">
+        <h2>{{ product.name }}</h2>
+        <p>Price: ${{ product.price }}</p>
+        <p>Category: {{ product.category }}</p>
+        <p *ngIf="product.description">Description: {{ product.description }}</p>
+      </div>
     </section>
   </main>
 
   <footer class="app-footer">
-    <p>&copy; 2025 {{ userName }}. All rights reserved.</p>
+    <p>&copy; 2025 My Angular Project. All rights reserved.</p>
   </footer>
 </div>
 
 <style>
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
-
-  .app-header {
-    background-color: #4caf50;
-    color: white;
+  .product-card {
+    border: 1px solid #ccc;
     padding: 1rem;
-    width: 100%;
-    text-align: center;
-  }
-
-  .app-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-
-  .content-section {
-    text-align: center;
-  }
-
-  .action-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .action-button:hover {
-    background-color: #0056b3;
-  }
-
-  .app-footer {
-    background-color: #f1f1f1;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
+    margin: 1rem;
+    border-radius: 5px;
+    width: 300px;
   }
 </style>
