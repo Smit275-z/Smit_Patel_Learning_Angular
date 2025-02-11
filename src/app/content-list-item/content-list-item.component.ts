@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { IContent } from '../models/content.model'; // Import the IContent interface
 
 @Component({
   selector: 'app-content-list-item',
-  imports: [],
+  standalone: true,
   templateUrl: './content-list-item.component.html',
-  styleUrl: './content-list-item.component.css'
+  styleUrls: ['./content-list-item.component.css'],
+  imports: [CommonModule]
 })
 export class ContentListItemComponent {
-
+  @Input() content!: IContent; // ✅ Input property to receive data from parent
 }
