@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IContent } from '../models/content.model'; // Import the IContent interface
+import { IContent } from '../models/content.model';
 
 @Component({
   selector: 'app-content-list-item',
@@ -10,5 +10,6 @@ import { IContent } from '../models/content.model'; // Import the IContent inter
   imports: [CommonModule]
 })
 export class ContentListItemComponent {
-  @Input() content!: IContent; // ✅ Input property to receive data from parent
+  @Input() content!: IContent; // Receives product details
+  @Input() index!: number; // Receives index for styling
 }

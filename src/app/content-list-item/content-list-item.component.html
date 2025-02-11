@@ -1,5 +1,5 @@
-<div class="content-item">
-    <h2 class="content-title">{{ content.title }}</h2> <!-- ✅ Title is now in an <h2> tag -->
+<div class="content-item" [class.even]="index % 2 === 0" [class.odd]="index % 2 !== 0">
+    <h2 class="content-title">{{ content.title }}</h2>
     <img [src]="content.imageUrl" alt="{{ content.title }}">
     <p class="category">Category: {{ content.category }}</p>
     <p class="price">Price: ${{ content.price }}</p>
