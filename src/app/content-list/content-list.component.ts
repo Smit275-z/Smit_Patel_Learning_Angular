@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ContentListItemComponent } from '../content-list-item/content-list-item.component';
 import { IContent } from '../models/content.model';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-content-list',
+  standalone: true,
   templateUrl: './content-list.component.html',
-  styleUrls: ['./content-list.component.css']
+  styleUrls: ['./content-list.component.css'],
+  imports: [CommonModule, ContentListItemComponent]
 })
+
 export class ContentListComponent {
   contents: IContent[] = [
     { id: 1, title: 'Laptop', description: 'High-end gaming laptop', price: 1200, category: 'Electronics', imageUrl: 'assets/laptop.png' },
