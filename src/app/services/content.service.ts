@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs'; 
 import { IContent } from '../models/content.model';
 import { MOCK_CONTENT } from '../data/mock-content';
 
@@ -6,11 +7,11 @@ import { MOCK_CONTENT } from '../data/mock-content';
   providedIn: 'root' // Makes this service available throughout the app
 })
 export class ContentService {
-  private contents: IContent[] = MOCK_CONTENT; // Local storage of content
+  private contents: IContent[] = MOCK_CONTENT; 
 
-  // Fetch all content
-  getAllContent(): IContent[] {
-    return this.contents;
+  // Fetch all content as an Observable
+  getAllContent(): Observable<IContent[]> {
+    return of(this.contents); 
   }
 
   // Get a single content item by ID
