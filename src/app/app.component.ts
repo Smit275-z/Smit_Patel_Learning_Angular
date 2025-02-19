@@ -1,14 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContentListComponent } from './content-list/content-list.component'; // ✅ Import ContentListComponent
+import { ContentListComponent } from './content-list/content-list.component';
+import { ContentListItemComponent } from './content-list-item/content-list-item.component';
+import { ContentService } from './services/content.service'; 
+import { IContent } from './models/content.model';
 
 @Component({
   selector: 'app-root',
-  standalone: true, // ✅ Standalone component
+  standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [CommonModule, ContentListComponent] // ✅ Add ContentListComponent to imports
+  imports: [CommonModule, ContentListComponent, ContentListItemComponent]
 })
-export class AppComponent {
-  title = 'Smit_Patel_Learning_Angular';
+export class AppComponent implements OnInit {
+  featuredContent: IContent | undefined;
+
+  constructor(private contentService: ContentService) {} 
+
+  ngOnInit() {
+    this.contentService.getContentById(1).subscribe((data) => {
+      this.featuredContent = data; 
+    });
+  }
 }
