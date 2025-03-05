@@ -1,0 +1,137 @@
+.content-item {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  background: white;
+}
+
+.content-item:hover {
+  transform: translateY(-5px);
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* ✅ Different background colors for even and odd items */
+.even {
+  background-color: pink;
+}
+
+.odd {
+  background-color: teal;
+  color: white;
+}
+
+.content-item img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.category {
+  font-size: 1rem;
+  color: #555;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.buy-button {
+  background: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #0056b3;
+}
+.content-item {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    background: white;
+  }
+  
+  .content-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .content-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  /* ✅ Different background colors for even and odd items */
+  .even {
+    background-color: pink;
+  }
+  
+  .odd {
+    background-color: teal;
+    color: white;
+  }
+  
+  .content-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+  
+  .category {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .buy-button {
+    background: #007bff;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background: #0056b3;
+  }
+  

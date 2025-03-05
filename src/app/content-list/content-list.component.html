@@ -1,0 +1,10 @@
+<div class="content-list">
+  <h2>Product List</h2>
+  <div class="content-grid">
+    <app-content-list-item 
+      *ngFor="let content of contents$ | async; let i = index" 
+      [content]="content"
+      [index]="i">
+    </app-content-list-item>
+  </div>
+</div>
