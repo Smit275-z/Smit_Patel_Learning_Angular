@@ -1,2 +1,10 @@
-<app-content-list-item *ngIf="featuredContent" [content]="featuredContent"></app-content-list-item>
-<app-content-list></app-content-list>
+<nav class="navbar">
+  <a routerLink="/" class="nav-link">Home</a>
+  <a routerLink="/modify-itemnnn" class="nav-link">Modify Item</a>
+</nav>
+
+<div class="featured-product">
+  <app-content-list-item *ngIf="featuredContent" [content]="featuredContent"></app-content-list-item>
+</div>
+
+<router-outlet></router-outlet>

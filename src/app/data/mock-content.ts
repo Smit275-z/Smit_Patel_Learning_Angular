@@ -1,7 +1,6 @@
 import { IContent } from '../models/content.model';
 
 export const MOCK_CONTENT: IContent[] = [
-  { id: 1, title: 'Laptop', description: 'High-end gaming laptop', price: 1200, category: 'Electronics', imageUrl: 'assets/laptop.png' },
   { id: 2, title: 'Smartphone', description: 'Latest 5G model', price: 900, category: 'Electronics', imageUrl: 'assets/phone.png' },
   { id: 3, title: 'Coffee Maker', description: 'Brews fresh coffee', price: 80, category: 'Home Appliance', imageUrl: 'assets/coffee.png' },
   { id: 4, title: 'Smartwatch', description: 'Advanced fitness tracking', price: 200, category: 'Wearables', imageUrl: 'assets/watch.png' },

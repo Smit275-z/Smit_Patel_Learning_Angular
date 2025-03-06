@@ -10,6 +10,6 @@ import { IContent } from '../models/content.model';
   imports: [CommonModule]
 })
 export class ContentListItemComponent {
-  @Input() content!: IContent; // Receives product details
-  @Input() index!: number; // Receives index for styling
+  @Input() content!: IContent;
+  @Input() index!: number;
 }
