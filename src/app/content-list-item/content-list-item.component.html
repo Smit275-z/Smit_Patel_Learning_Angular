@@ -1,9 +1,8 @@
 <div class="content-item" [class.even]="index % 2 === 0" [class.odd]="index % 2 !== 0">
-    <h2 class="content-title">{{ content.title }}</h2>
-    <img [src]="content.imageUrl" alt="{{ content.title }}">
-    <p class="category">Category: {{ content.category }}</p>
-    <p class="price">Price: ${{ content.price }}</p>
-    <p class="description">{{ content.description }}</p>
-    <button class="buy-button">Buy Now</button>
-  </div>
-  
+  <h2 class="content-title">{{ content.title }}</h2>
+  <img [src]="content.imageUrl" alt="{{ content.title }}" class="content-image" *ngIf="content.imageUrl">
+  <p class="category">Category: {{ content.category }}</p>
+  <p class="price">Price: ${{ content.price }}</p>
+  <p class="description">{{ content.description }}</p>
+  <button class="buy-button">Buy Now</button>
+</div>

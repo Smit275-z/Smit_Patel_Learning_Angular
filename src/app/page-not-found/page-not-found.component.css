@@ -1,0 +1,14 @@
+.not-found {
+  text-align: center;
+  padding: 50px;
+}
+
+.home-link {
+  color: #007bff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
