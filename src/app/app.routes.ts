@@ -1,10 +1,19 @@
 import { Routes } from '@angular/router';
-import { ContentListComponent } from './content-list/content-list.component';
-import { ModifyListItemComponent } from './modify-list-item/modify-list-item.component'; 
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; 
+import { ContentListComponent } from './content-list/content-list.component'; // Eager loaded
 
 export const routes: Routes = [
-  { path: '', component: ContentListComponent }, 
-  { path: 'modify-item', component: ModifyListItemComponent }, 
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    component: ContentListComponent // Eager load home page
+  },
+  {
+    path: 'modify-item',
+    loadComponent: () => import('./modify-list-item/modify-list-item.component')
+      .then(m => m.ModifyListItemComponent) // Lazy loaded
+  },
+  {
+    path: '**',
+    loadComponent: () => import('./page-not-found/page-not-found.component')
+      .then(m => m.PageNotFoundComponent) // Lazy loaded
+  }
 ];
