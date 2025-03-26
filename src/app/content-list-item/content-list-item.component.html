@@ -4,5 +4,9 @@
   <p class="category">Category: {{ content.category }}</p>
   <p class="price">Price: ${{ content.price }}</p>
   <p class="description">{{ content.description }}</p>
+
+  <!-- ✅ Custom Pipe Usage -->
+  <p class="summary"><strong>Summary:</strong> {{ content | contentSummary }}</p>
+
   <button class="buy-button">Buy Now</button>
 </div>

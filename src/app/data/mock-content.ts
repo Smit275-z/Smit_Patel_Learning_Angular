@@ -7,7 +7,7 @@ export const MOCK_CONTENT: IContent[] = [
     description: 'Latest 5G model',
     price: 900,
     category: 'Electronics',
-    imageUrl: 'assets/phone.png',
+    imageUrl: 'assets/laptop.png',
     releaseDate: '2023-11-05',
     manufacturer: 'Samsung',
     shippingFee: 25.5
