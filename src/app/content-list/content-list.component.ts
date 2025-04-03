@@ -4,13 +4,16 @@ import { ContentListItemComponent } from '../content-list-item/content-list-item
 import { IContent } from '../models/content.model';
 import { ContentService } from '../services/content.service'; // ✅ Import ContentService
 import { Observable } from 'rxjs';
+import { HoverHighlightDirective } from '../hover-highlight.directive';
+import { ContentSummaryPipe } from '../pipes/content-summary.pipe';
+
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.css'],
-  imports: [CommonModule, ContentListItemComponent]
+  imports: [CommonModule, ContentListItemComponent, HoverHighlightDirective, ContentSummaryPipe]
 })
 export class ContentListComponent implements OnInit {
   contents$: Observable<IContent[]> = new Observable<IContent[]>(); // ✅ Use an Observable
