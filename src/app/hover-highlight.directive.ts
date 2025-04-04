@@ -5,10 +5,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   standalone: true
 })
 export class HoverHighlightDirective {
-  /**
-   * The color to use for highlighting the element on hover.
-   * Usage in template: [appHoverHighlight]="'lightblue'" or just appHoverHighlight (for default).
-   */
+
   @Input('appHoverHighlight') highlightColor: string = 'yellow';
 
   constructor(private el: ElementRef) {}
