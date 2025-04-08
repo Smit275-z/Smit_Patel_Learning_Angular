@@ -1,1 +1,37 @@
-<p>modify-list-item works!</p>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Modify Item</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="modify-form">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="Enter product title" 
+                 matTooltip="Please enter the complete product title" />
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Description</mat-label>
+          <textarea matInput placeholder="Enter description" 
+                    matTooltip="Give a brief description of the product"></textarea>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Price</mat-label>
+          <input matInput type="number" placeholder="Enter price" 
+                 matTooltip="Specify the price in USD" />
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Category</mat-label>
+          <input matInput placeholder="Enter category" 
+                 matTooltip="Provide a category such as Electronics, Appliances, etc." />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Save</button>
+      <button mat-raised-button color="warn">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+  

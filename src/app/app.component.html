@@ -1,10 +1,8 @@
-<nav class="navbar">
-  <a routerLink="/" class="nav-link">Home</a>
-  <a routerLink="/modify-item" class="nav-link">Modify Item</a>
-</nav>
-
-<div class="featured-product">
-  <app-content-list-item *ngIf="featuredContent" [content]="featuredContent"></app-content-list-item>
-</div>
+<mat-toolbar color="primary">
+  <span>My App</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/" routerLinkActive="active">Home</button>
+  <button mat-button routerLink="/modify-item" routerLinkActive="active">Modify Item</button>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

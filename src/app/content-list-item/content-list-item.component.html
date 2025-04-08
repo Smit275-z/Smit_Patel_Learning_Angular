@@ -1,11 +1,37 @@
-<div class="content-item" [class.even]="index % 2 === 0" [class.odd]="index % 2 !== 0">
-  <h2 class="content-title">{{ content.title }}</h2>
-  <img [src]="content.imageUrl" alt="{{ content.title }}" class="content-image" *ngIf="content.imageUrl">
-  <p class="category">Category: {{ content.category }}</p>
-  <p class="price">Price: ${{ content.price }}</p>
-  <p class="description">{{ content.description }}</p>
-
-  <p class="summary"><strong>Summary:</strong> {{ content | contentSummary }}</p>
-
-  <button class="buy-button">Buy Now</button>
-</div>
+<mat-card appHoverHighlight="lightblue" [class.even]="index % 2 === 0" [class.odd]="index % 2 !== 0">
+  <mat-card-header>
+    <mat-card-title>{{ content.title }}</mat-card-title>
+    <mat-card-subtitle>{{ content.category }}</mat-card-subtitle>
+  </mat-card-header>
+  
+  <!-- Display the image if available -->
+  <img mat-card-image [src]="content.imageUrl" alt="{{ content.title }}" *ngIf="content.imageUrl">
+  
+  <mat-card-content>
+    <p class="price">Price: ${{ content.price }}</p>
+    <p class="description">{{ content.description }}</p>
+    <p class="summary"><strong>Summary:</strong> {{ content | contentSummary }}</p>
+  </mat-card-content>
+  
+  <mat-card-actions>
+    <button mat-raised-button color="accent">Buy Now</button>
+  </mat-card-actions>
+</mat-card>
+<mat-card appHoverHighlight="lightblue" [class.even]="index % 2 === 0" [class.odd]="index % 2 !== 0">
+  <mat-card-header>
+    <mat-card-title>{{ content.title }}</mat-card-title>
+    <mat-card-subtitle>{{ content.category }}</mat-card-subtitle>
+  </mat-card-header>
+  
+  <img mat-card-image [src]="content.imageUrl" alt="{{ content.title }}" *ngIf="content.imageUrl">
+  
+  <mat-card-content>
+    <p class="price">Price: ${{ content.price }}</p>
+    <p class="description">{{ content.description }}</p>
+    <p class="summary"><strong>Summary:</strong> {{ content | contentSummary }}</p>
+  </mat-card-content>
+  
+  <mat-card-actions>
+    <button mat-raised-button color="accent">Buy Now</button>
+  </mat-card-actions>
+</mat-card>
